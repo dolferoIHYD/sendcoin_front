@@ -18,6 +18,7 @@ body{
 a{
   text-decoration: none;
   color: white;
+  outline: none !important;
 }
 .border-line{
   width: 100%;
@@ -381,6 +382,10 @@ a:focus{
   display: flex;
   flex-wrap: wrap;
   padding:10px;
+@media(max-width:600px){
+  width: calc(100% - 20px);
+  right:0;
+}
 
 
 
@@ -468,4 +473,86 @@ a:focus{
 .re{
   position:relative;
   top:-2px;
+}
+
+.popup-bg{
+  transition: opacity .7s, visibility .7s;
+  position:fixed;
+  background-color: rgba(0,0,0,0.3);
+  width:calc(100vw - 16px);
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index: 10;
+  .popup{
+    max-width: calc(100vw - 30px);
+    width:300px;
+    background-color: #192936;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    padding:15px 0px;
+    border: solid 1px #af834d;
+    border-radius: 3px;
+    position:relative;
+    .close-cross{
+      cursor: pointer;
+      position:absolute;
+      border: solid 2px #af834d;
+      border-radius: 30px;
+      display:flex;
+      right: -14px;
+      top: -14px;
+      background-color: #192936;
+      span{
+        font-size:40px;
+        line-height: 23px;
+        position: relative;
+        top: -1px;
+
+      }
+    }
+    .title{
+      font-size:22px;
+      font-weight:bold;
+      margin-bottom:15px;
+      color: #af834d;
+    }
+    form#app-form{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      >input{
+        margin-bottom:10px;
+        padding: 7px;
+        border: solid 2px #af834d;
+        border-radius: 3px;
+      }
+      button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #192936;
+        border: solid 1px #af834d;
+        border-radius: 3px;
+        font-size: 16px;
+        font-weight: 600;
+        height: 49.9px;
+        color: white;
+        outline: none !important;
+
+      }
+      button:hover {
+        text-decoration: none !important;
+        opacity: .8;
+      }
+
+    }
+  }
+}
+
+.close-popup{
+  opacity:0;
+  visibility:hidden;
 }

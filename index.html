@@ -9,11 +9,24 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU&width=100%" type="text/javascript"></script>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <title>Send Coin</title>
+    <title>Sand Coin</title>
     <link rel="icon" type="image/png" href="SNDlogo.png" />
     <link rel="apple-touch-icon" href="SNDlogo.png"/>
 </head>
 <body>
+    <div class="popup-bg close-popup">
+        <div class="popup">
+            <div class="close-cross" onclick="closePopup()"><span>×</span></div>
+            <div class="title">Оставить заявку</div>
+            <form method="post" id="app-form" action="javascript:void(null);" onsubmit="reestablP()">
+                <input type="text" name="" placeholder="Имя" required>
+                <input type="text" name="" placeholder="Сумма" required>
+                <input type="email" name="" placeholder="E-mail" required>
+                <div id="subm"><button type="submit">Отправить</button></div>
+            </form>
+
+        </div>
+    </div>
 	<nav class="main-block">
         <div class="nav-block">
             <img src="img/SNDlogo.png">
@@ -48,7 +61,7 @@
             <div class="invite-timer-text">
                 Продажа наших токенов будет проходить в режиме реального времени на масштабной конференции посвящённой блок-чейн технологии в самом сердце Санк-Петербурга
             </div>
-            <a href="#" class="btn btn-invite">Оставить заявку</a>
+            <a href="javascript:" class="btn btn-invite" onclick="popup()">Оставить заявку</a>
         </div>
     </section>
     <section class="main-block paper">
@@ -176,7 +189,13 @@
         <div>
             <div class="title-footer">Мы в социальных сетях:</div>
             <div class="soc-footer">
-            <img src="img/Twitter1x.png"><img src="img/Facebook1x.png"><img src="img/Instagram1x.png"><img src="img/Telegram1x.png"><img src="img/YouTube1x.png">
+            <div class="soc-footer">
+                <a target="_blank" href="https://twitter.com/sandcoin"><img src="img/Twitter1x.png"></a>
+                <a target="_blank" href="https://www.facebook.com/cryptosandcoin/"><img src="img/Facebook1x.png"></a>
+                <a target="_blank" href="https://vk.com/sandcoin"><img src="img/vk_logo.png" width="25px"></a>
+                <a target="_blank" href="https://web.telegram.org/#/im?p=@sandcoinru"><img src="img/Telegram1x.png"></a>
+                <a target="_blank" href="#"><img src="img/YouTube1x.png"></a>
+            </div>
             </div>
         </div>   
         <div class="contacts-footer">
@@ -214,20 +233,51 @@
 
      <script type="text/javascript">
         function changeLng(){
+         
            // if (navigator.language == "ru" || navigator.browserLanguage == "ru"){
             //    $(".ru").removeClass("close-all")
            // }
-            if (navigator.language == "zh-Hans-CN" || navigator.browserLanguage == "zh-Hans-CN"){
-                $(".zh").removeClass("close-all")
+           var str = navigator.language;
+           var str1 = navigator.browserLanguage
+            if((str.indexOf('zh') + 1) || (str.indexOf('ZH') + 1) || (str1.indexOf('zh') + 1) || (str1.indexOf('ZH') + 1)){
+                    $(".zh").removeClass("close-all")
             }
-            if (navigator.language == "en" || navigator.browserLanguage == "en"){
-                $(".en").removeClass("close-all")
+
+            str = navigator.language;
+            str1 = navigator.browserLanguage
+            if((str.indexOf('en') + 1) || (str.indexOf('EN') + 1) || (str1.indexOf('en') + 1) || (str1.indexOf('EN') + 1)){
+                    $(".en").removeClass("close-all")
+
             }
         }
         changeLng();
         $("body").on("click",".close-notify", function(){
             $(".notify").addClass("close-all")
         })
+</script>
+<script>
+    function reestablP() {
+        var form = $("#form").serialize();
+        $.ajax({
+            type: "POST",
+            url: "/URL/",
+            data: form,
+            success: function () {
+                $('#subm').fadeOut(1).html('<div class="success">Все прошло успешно</div>').fadeIn("slow");
+            },
+            error: function () {
+                alert("Ошибка сервера");
+
+            }
+        });
+    }
+    function closePopup(){
+        $(".popup-bg").addClass("close-popup");
+    }
+
+    function popup(){
+        $(".popup-bg").removeClass("close-popup");
+    }
 </script>
 </body>
 </html>
