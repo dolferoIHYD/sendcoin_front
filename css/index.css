@@ -235,7 +235,7 @@ footer.main-block {
     margin-bottom: 3px; }
   footer.main-block .soc-footer {
     display: flex;
-    margin-top: 12px; }
+    margin-top: 5px; }
     footer.main-block .soc-footer a:hover {
       opacity: .7; }
     footer.main-block .soc-footer img {
