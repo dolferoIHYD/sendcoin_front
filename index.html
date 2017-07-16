@@ -5,13 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/index.css" rel="stylesheet">
-    <script src="https://share.kickcityapp.com/static/widget/dist/main.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU&width=100%" type="text/javascript"></script>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
     <title>Sand Coin</title>
     <link rel="icon" type="image/png" href="SNDlogo.png" />
     <link rel="apple-touch-icon" href="SNDlogo.png"/>
+    <script type="text/javascript" src="js/megatimer.min.js"></script>
 </head>
 <body>
     <div class="popup-bg close-popup">
@@ -42,7 +40,7 @@
     </nav>
 	<header class="main-block">
         <div class="main-header">
-            <div class="title">Представляем вашему вниманию электронный опцион на приобретение песка самого высокого качества </div>
+            <div class="title">Представляем вашему вниманию электронный опцион на приобретение строительного песка</div>
             <div class="text">
                 Физические проекты, в отличии от облачных технологий, имеют большую надёжность в плане подкрепления деривативов продолжительной историей своего существования
             </div>
@@ -54,14 +52,17 @@
 	<section class="main-block timer-block">
         <div class="main-title">Pre-ICO</div>
         <div class="timer">
-            <div class="timer-block"><script src="http://megatimer.ru/s/ba45ac33f8cef97cdfe2c2ae86814859.js"></script></div>
+            <div class="timer-block">
+                <script src="js/18d63e1cab2d1bd7e6cf0bfec1a04c9b.js"></script>
+                <!--script src="http://megatimer.ru/s/ba45ac33f8cef97cdfe2c2ae86814859.js"></script-->
+            </div>
             <div class="timer-text">Самое выгодное предложение для ранних инвесторов, которое дает возможность получить ощутимый доход в первые дни появления токена на бирже </div>
         </div>
         <div class="invite-timer">
             <div class="invite-timer-text">
                 Продажа наших токенов будет проходить в режиме реального времени на масштабной конференции посвящённой блок-чейн технологии в самом сердце Санк-Петербурга
             </div>
-            <a href="javascript:" class="btn btn-invite" onclick="popup()">Оставить заявку</a>
+            <a href="javascript:" class="btn btn-invite" onclick="popup()">Оставить заявку на инвестирование</a>
         </div>
     </section>
     <section class="main-block paper">
@@ -191,7 +192,7 @@
             <div>Email: <a href="mailto:ico@sandcoin.io">ico@sandcoin.io</a></div>
         </div>   
         <div class="title-footer">
-            <div>Sandcoin © 2017</div>
+            <div>Sandcoin, LLC © 2017</div>
             <a class="nova" target="_blank" href="http://xn--80acbbp8bh.xn--p1ai/">Веб-Студия "НоваВеб"</a>
         </div>
     </footer>
@@ -220,20 +221,15 @@
 
      <script type="text/javascript">
         function changeLng(){
-         
-           // if (navigator.language == "ru" || navigator.browserLanguage == "ru"){
-            //    $(".ru").removeClass("close-all")
-           // }
-           var str = navigator.language;
-           var str1 = navigator.browserLanguage
-            if((str.indexOf('zh') + 1) || (str.indexOf('ZH') + 1) || (str1.indexOf('zh') + 1) || (str1.indexOf('ZH') + 1)){
+           var str = navigator.language || navigator.browserLanguage;
+            if((str.indexOf('zh') + 1) || (str.indexOf('ZH') + 1)){
                     $(".zh").removeClass("close-all")
             }
 
-            str = navigator.language;
-            str1 = navigator.browserLanguage
-            if((str.indexOf('en') + 1) || (str.indexOf('EN') + 1) || (str1.indexOf('en') + 1) || (str1.indexOf('EN') + 1)){
-                    $(".en").removeClass("close-all")
+            str = navigator.language || navigator.browserLanguage;
+            str1 = "qwe"
+            if( (str.indexOf('en') + 1) || (str.indexOf('EN') + 1)){
+                    $(".en").removeClass("close-all");
 
             }
         }
@@ -241,8 +237,7 @@
         $("body").on("click",".close-notify", function(){
             $(".notify").addClass("close-all")
         })
-</script>
-<script>
+
     function reestablP() {
         var form = $("#form").serialize();
         $.ajax({
@@ -250,7 +245,7 @@
             url: "/URL/",
             data: form,
             success: function () {
-                $('#subm').fadeOut(1).html('<div class="success">Все прошло успешно</div>').fadeIn("slow");
+                $('#subm').fadeOut(1).html('<div class="success">Спасибо за оставленную заявку</div>').fadeIn("slow");
             },
             error: function () {
                 alert("Ошибка сервера");
@@ -258,6 +253,7 @@
             }
         });
     }
+    
     function closePopup(){
         $(".popup-bg").addClass("close-popup");
     }

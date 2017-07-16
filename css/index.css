@@ -3,6 +3,12 @@
   src: url("../fonts/Scorpion.eot?") format("eot"), url("../fonts/Scorpion.woff") format("woff"), url("../fonts/Scorpion.ttf") format("truetype"), url("../fonts/Scorpion.svg#Scorpion") format("svg");
   font-weight: normal;
   font-style: normal; }
+@font-face {
+  font-family: "OpenSans";
+  src: url("../fonts/OpenSansRegular/OpenSansRegular.eot");
+  src: url("../fonts/OpenSansRegular/OpenSansRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSansRegular/OpenSansRegular.woff") format("woff"), url("../fonts/OpenSansRegular/OpenSansRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
 body {
   background-color: #2b373f;
   color: white;
@@ -52,7 +58,9 @@ a {
   width: 190.8px; }
 
 .btn-invite {
-  width: 170.4px; }
+  width: 170.4px;
+  padding: 0 15px;
+  text-align: center; }
 
 .main-block {
   margin: auto;
@@ -189,7 +197,6 @@ section.main-block {
       padding-bottom: 44px; }
 
 .timer, .invite-timer {
-  width: 100%;
   max-width: 413px;
   display: flex;
   flex-direction: column;
@@ -200,7 +207,6 @@ section.main-block {
   width: 100%;
   overflow: hidden; }
   .timer-block > div {
-    width: 100%;
     min-width: 0 !important; }
   .timer-block .main-title {
     margin-bottom: 27px; }
@@ -345,14 +351,14 @@ a:focus {
   .invite-timer-text {
     max-width: 420px; } }
 @media (max-width: 360px) {
-  #timer-separator-ba45ac33f8cef97cdfe2c2ae86814859-hours, #timer-separator-ba45ac33f8cef97cdfe2c2ae86814859-minutes, #timer-separator-ba45ac33f8cef97cdfe2c2ae86814859-secundes {
+  #timer-separator-18d63e1cab2d1bd7e6cf0bfec1a04c9b-hours, #timer-separator-18d63e1cab2d1bd7e6cf0bfec1a04c9b-minutes, #timer-separator-18d63e1cab2d1bd7e6cf0bfec1a04c9b-secundes {
     padding: 0 6px !important; }
 
   .timer-block {
     margin-bottom: 0; }
     .timer-block span {
       font-size: 30px !important; }
-    .timer-block #timer-text-ba45ac33f8cef97cdfe2c2ae86814859-days, .timer-block #timer-text-ba45ac33f8cef97cdfe2c2ae86814859-hours, .timer-block #timer-text-ba45ac33f8cef97cdfe2c2ae86814859-minutes, .timer-block #timer-text-ba45ac33f8cef97cdfe2c2ae86814859-secundes {
+    .timer-block #timer-text-18d63e1cab2d1bd7e6cf0bfec1a04c9b-days, .timer-block #timer-text-18d63e1cab2d1bd7e6cf0bfec1a04c9b-hours, .timer-block #timer-text-18d63e1cab2d1bd7e6cf0bfec1a04c9b-minutes, .timer-block #timer-text-18d63e1cab2d1bd7e6cf0bfec1a04c9b-secundes {
       font-size: 15px !important; } }
 @media (max-width: 440px) {
   nav.main-block {
@@ -445,5 +451,17 @@ a:focus {
 .close-popup {
   opacity: 0;
   visibility: hidden; }
+
+@media (max-width: 376px) {
+  .one-person .photo {
+    margin-bottom: 0px; }
+
+  #team .one-person {
+    margin-bottom: 30px; } }
+#timer-number-value-18d63e1cab2d1bd7e6cf0bfec1a04c9b-days, #timer-number-value-18d63e1cab2d1bd7e6cf0bfec1a04c9b-hours, #timer-number-value-18d63e1cab2d1bd7e6cf0bfec1a04c9b-minutes, #timer-number-value-18d63e1cab2d1bd7e6cf0bfec1a04c9b-secundes {
+  color: #af834d; }
+
+.timer-separator {
+  color: #af834d !important; }
 
 /*# sourceMappingURL=index.css.map */
