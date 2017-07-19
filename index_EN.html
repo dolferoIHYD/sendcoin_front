@@ -15,10 +15,11 @@
 <div class="popup-bg close-popup">
         <div class="popup">
             <div class="close-cross" onclick="closePopup()"><span>×</span></div>
-            <div class="title">Application</div>
+            <div class="title">Please leave your investment request here</div>
+             <!-- TODO name for input -->
             <form method="post" id="app-form" action="javascript:void(null);" onsubmit="reestablP()">
                 <input type="text" name="" placeholder="Name" required>
-                <input type="text" name="" placeholder="Amount" required>
+                <input type="number" name="" placeholder="Amount" required>
                 <input type="email" name="" placeholder="E-mail" required>
                 <div id="subm"></dir><button type="submit" >Submit</button></div>
             </form>
@@ -32,7 +33,7 @@
         </div>
         <div class="nav-block">
             <a class="main-link" href="#">Home</a>
-            <a href="#">My profile</a>
+            <a href="lk_EN.html">My profile</a>
             <a href="index.html" class="link-lang"><img src="img/RU.png" width="25px" height="13px">
             RU
             </a>
@@ -51,13 +52,33 @@
         <div class="big-coin"><img src="img/3d 1x.png"></div>    
     </header>
     <div class="border-line"></div>
-	<section class="main-block timer-block">
+    <section class="main-block timer-block">
+        <div class="timer">
+            <div class="main-title"><img src="img/sand-clock.png"><span>Pre-ICO</span></div>
+            <div class="timer-block">
+                <script src="js/18d63e1cab2d1bd7e6cf0bfec1a04c9b.js"></script>
+                <!--script src="http://megatimer.ru/s/ba45ac33f8cef97cdfe2c2ae86814859.js"></script-->
+            </div>
+            <div class="timer-text">The most interesting offer for early investors, guaranteed growth of the exchange rate in the first days of entering the exchange.</div>
+            <div class="timer-text">The sale of our tokens will take place in real time at a large-scale conference devote to blockchain technology in the heart of St. Petersburg</div>
+            <a href="javascript:" class="btn btn-invite" onclick="popup()">Submit</a>
+        </div>
+        <div class="invite-timer">
+            <div class="main-title"><span>White Paper</span></div>
+            <div class="invite-timer-text">
+                Evaluate our project and make sure of the reliability of investments
+            </div>
+            <img src="img/file.png">
+            <a href="javascript:" class="btn btn-invite" onclick="">Open document</a>
+        </div>
+    </section>
+	<!--section class="main-block timer-block">
         <div class="main-title">Pre-ICO</div>
         <div class="timer">
             <div class="timer-block">
                 <script src="js/18d63e1cab2d1bd7e6cf0bfec1a04c9b.js"></script>
                 <!--script src="http://megatimer.ru/s/ba45ac33f8cef97cdfe2c2ae86814859.js"></script-->
-            </div>
+            <!--/div>
             <div class="timer-text">The most interesting offer for early investors, guaranteed growth of the exchange rate in the first days of entering the exchange</div>
         </div>
         <div class="invite-timer">
@@ -66,24 +87,30 @@
             </div>
             <a href="javascript:" class="btn btn-invite" onclick="popup()">Submit</a>
         </div>
-    </section>
-    <section class="main-block paper">
+    </section-->
+    <!--section class="main-block paper">
         <div class="main-title">White Paper</div>
         <!--div class="post-title">
             Lorem ipsum dolor sit amet
         </div-->
-        <div class="text-paper">
+        <!--div class="text-paper">
             Evaluate our project and make sure of the reliability of investments
         </div>
         <a href="#" class="btn btn-document">Open the document</a>
+    </section-->
+    <section class="main-block video">
+        <div class="videoWrapper">
+            <iframe   src="https://www.youtube.com/embed/xFa2_PVMeDQ" frameborder="0" allowfullscreen></iframe>
+        </div>
     </section>
-    <section class="main-block road">
+        <section class="main-block road">
         <div class="main-title">Roadmap</div>
         <div class="road-map">
             <div class="road-conteiner">
                 <div class="road-one-block">
-                    <div><img src="img/road1.svg"></div>
-                    <div>Pre-ICO</div>
+                    <div class="data">August 2017</div>
+                    <div class="img"><img src="img/road1.png"></div>
+                    <div class="desk">Pre-ICO</div>
                 </div>
                 <div class="road-dot">
                     <img src="img/RoadmapDot.svg">
@@ -91,8 +118,9 @@
             </div>
             <div class="road-conteiner">
                 <div class="road-one-block">
-                    <div><img src="img/road2.svg"></div>
-                    <div>ICO</div>
+                    <div class="data">October 2017</div>
+                    <div class="img"><img src="img/road2.png"></div>
+                    <div class="desk">ICO</div>
                 </div>
                 <div class="road-dot">
                     <img src="img/RoadmapDot.svg">
@@ -100,8 +128,9 @@
                 </div>
             <div class="road-conteiner">
                 <div class="road-one-block">
-                    <div><img src="img/road3.svg"></div>
-                    <div>Technical work</div>
+                    <div class="data">April 2017</div>
+                    <div class="img"><img src="img/road3.png"></div>
+                    <div class="desk">Technical work</div>
                 </div>
                 <div class="road-dot">
                     <img src="img/RoadmapDot.svg">
@@ -109,8 +138,9 @@
                 </div>
             <div class="road-conteiner">
                 <div class="road-one-block">
-                    <div><img src="img/road4.svg"></div>
-                    <div>Quarrying</div>
+                    <div class="data">May 2017</div>
+                    <div class="img"><img src="img/road4.png"></div>
+                    <div class="desk">Quarrying</div>
                 </div>
                 <div class="road-dot">
                     <img src="img/RoadmapDot.svg">
@@ -118,8 +148,9 @@
                 </div>
             <div class="road-conteiner">
                 <div class="road-one-block">
-                    <div><img src="img/road5.svg"></div>
-                    <div>Buy back SND</div>
+                    <div class="data">July 2017</div>
+                    <div class="img"><img src="img/road5.png"></div>
+                    <div class="desk">Buy back SND</div>
                 </div>
                 <div class="road-dot">
                     <img src="img/RoadmapDot.svg">
@@ -127,8 +158,9 @@
                 </div>
             <div class="road-conteiner">
                 <div class="road-one-block">
-                    <div><img src="img/road6.svg"></div>
-                    <div>Connecting partners</div>
+                    <div class="data">February 2019</div>
+                    <div class="img"><img src="img/road6.png"></div>
+                    <div class="desk">Connecting partners</div>
                 </div>
                 <div class="road-dot">
                     <img src="img/RoadmapDot.svg">
@@ -136,28 +168,22 @@
                 </div>
             <div class="road-conteiner">
                 <div class="road-one-block">
-                    <div><img src="img/road7.svg"></div>
-                    <div>Quarrying II</div>
-                </div>
-                <div class="road-dot">
-                    <img src="img/RoadmapDot.svg">
-                </div>
-                <div class="road-arrow">
-                    <img src="img/RoadmapArrow.svg">
+                    <div class="data">2020</div>
+                    <div class="img"><img src="img/road7.png"></div>
+                    <div class="desk">Quarrying II</div>
                 </div>
             </div>
         </div>
     </section>
     <section id="team" class="main-block">
-
         <div class="main-title">Оur team</div>
-
         <div class="one-person">
             <div class="photo">
                <img src="img/rus.jpg">
             </div>
             <div class="name">Ruslan Pichugin</div>
             <div class="job">CTO, telegram - @Ryonion</div>
+            <div class="soc"><img src="img/Facebook1x.png" width="20px"><img src="img/Telegram1x.png" width="23px"></div>
         </div>
         <div class="one-person">
             <div class="photo">
@@ -165,6 +191,7 @@
             </div>
             <div class="name">Grachkov Kirill</div>
             <div class="job">COO</div>
+            <div class="soc"><img src="img/Facebook1x.png" width="20px"><img src="img/Telegram1x.png" width="23px"></div>
         </div>
         <div class="one-person">
             <div class="photo">
@@ -172,8 +199,29 @@
             </div>
             <div class="name">Lev Leiman</div>
             <div class="job">CMO, telegram - @lLeiman</div>
+            <div class="soc"><img src="img/Facebook1x.png" width="20px"><img src="img/Telegram1x.png" width="23px"></div>
         </div>
+    </section>
+    <section class="main-block publ-life">
+        <div class="main-title">Public life</div>
 
+        <div class="one-life">
+            <div class="top">
+                <a href=""><img src="img/you-tube.png"></a>
+                <span class="date">15 July 2017</span>
+            </div>
+            <div class="prev"><a href="">Conference in Rostov</a></div>
+            <div class="desk">Our first performance</div>
+        </div>
+        <!--вариант с картинкой-->
+        <!--div class="one-life"> 
+            <div class="top">
+                <a href=""><img src="img/you-tube.png"></a>
+                <span class="date">15 July 2017</span>
+            </div>
+            <div class="prev"><a href=""><img src="img/lev.jpg" width="280px" height="150px"></a></div>
+            <div class="desk">Our first performance</div>
+        </div-->
     </section>
     <div class="border-line"></div>
 	<footer class="main-block">
@@ -182,8 +230,9 @@
             <div class="soc-footer">
                 <a target="_blank" href="https://twitter.com/sandcoin"><img src="img/Twitter1x.png"></a>
                 <a target="_blank" href="https://www.facebook.com/cryptosandcoin/"><img src="img/Facebook1x.png"></a>
-                <a target="_blank" href="https://vk.com/sandcoin"><img src="img/vk_logo.png" width="25px"></a>
+                <a target="_blank" href="https://vk.com/sandcoin"><img src="img/vk_logo.png"></a>
                 <a target="_blank" href="https://t.me/sandcoin"><img src="img/Telegram1x.png"></a>
+                <a target="_blank" href="https://github.com/sndtoken/ico"><img src="img/github-logo.png"></a>
             </div>
         </div>   
         <div class="contacts-footer">
@@ -192,7 +241,7 @@
             <div>Email: <a href="mailto:ico@sandcoin.io">ico@sandcoin.io</a></div>
         </div>   
         <div class="title-footer">
-            <div>Sandcoin, LLC © 2017</div>
+            <div>Sandcoin © 2017</div>
             <a class="nova" target="_blank" href="http://xn--80acbbp8bh.xn--p1ai/">Web-Studio "НоваВеб"</a>
         </div>
     </footer>
@@ -229,8 +278,7 @@
             }
 
             str = navigator.language || navigator.browserLanguage;
-            str1 = "qwe"
-            if( (str.indexOf('ru') + 1) || (str.indexOf('RU') + 1)){
+            if( (str.indexOf('ru') + 1) || (str.indexOf('RU') + 1) || (str.indexOf('Ru') + 1)){
                     $(".ru").removeClass("close-all");
 
             }
@@ -239,9 +287,9 @@
         $("body").on("click",".close-notify", function(){
             $(".notify").addClass("close-all")
         })
-
+// TODO url
         function reestablP() {
-        var form = $("#form").serialize();
+        var form = $("#app-form").serialize();
         $.ajax({
             type: "POST",
             url: "/URL/",

@@ -15,10 +15,11 @@
     <div class="popup-bg close-popup">
         <div class="popup">
             <div class="close-cross" onclick="closePopup()"><span>×</span></div>
-            <div class="title">Оставить заявку</div>
+            <div class="title">Оставить заявку на инвестирование в Pre-ICO</div>
+            <!-- TODO name for input -->
             <form method="post" id="app-form" action="javascript:void(null);" onsubmit="reestablP()">
                 <input type="text" name="" placeholder="Имя" required>
-                <input type="text" name="" placeholder="Сумма" required>
+                <input type="number" name="" placeholder="Сумма" required>
                 <input type="email" name="" placeholder="E-mail" required>
                 <div id="subm"><button type="submit">Отправить</button></div>
             </form>
@@ -32,7 +33,7 @@
         </div>
         <div class="nav-block">
             <a class="main-link" href="#">Главная</a>
-            <a href="#">Личный кабинет</a>
+            <a href="lk.html">Личный кабинет</a>
             <a href="index.html" class="main-link-lang link-lang"><img src="img/RU.png" width="25px" height="13px">RU</a>
             <span class="re">|</span>
             <a href="index_EN.html" class="link-lang"><img src="img/EN.png"  width="25px" height="13px">EN</a>
@@ -46,42 +47,53 @@
             </div>
             <a href="" class="btn btn-lk">Участвовать</a>
         </div> 
-        <div class="big-coin"><img src="img/3d 1x.png"></div>    
+        <div class="big-coin"><img src="img/3d 1x.png" width="200px"></div>    
     </header>
     <div class="border-line"></div>
 	<section class="main-block timer-block">
-        <div class="main-title">Pre-ICO</div>
+        
         <div class="timer">
+            <div class="main-title"><img src="img/sand-clock.png"><span>Pre-ICO</span></div>
             <div class="timer-block">
                 <script src="js/18d63e1cab2d1bd7e6cf0bfec1a04c9b.js"></script>
                 <!--script src="http://megatimer.ru/s/ba45ac33f8cef97cdfe2c2ae86814859.js"></script-->
             </div>
-            <div class="timer-text">Самое выгодное предложение для ранних инвесторов, которое дает возможность получить ощутимый доход в первые дни появления токена на бирже </div>
+            <div class="timer-text">Самое выгодное предложение для ранних инвесторов, которое дает возможность получить ощутимый доход в первые дни появления токена на бирже.</div>
+            <div class="timer-text">Продажа наших токенов будет проходить в режиме реального времени на масштабной конференции посвящённой блок-чейн технологии в самом сердце Санк-Петербурга</div>
+            <a href="javascript:" class="btn btn-invite" onclick="popup()">Оставить заявку</a>
         </div>
         <div class="invite-timer">
+            <div class="main-title"><span>White Paper</span></div>
             <div class="invite-timer-text">
-                Продажа наших токенов будет проходить в режиме реального времени на масштабной конференции посвящённой блок-чейн технологии в самом сердце Санк-Петербурга
+                Оцените наш проект, оценив инвестиционную привлекательность и надежность стратегического плана
             </div>
-            <a href="javascript:" class="btn btn-invite" onclick="popup()">Оставить заявку на инвестирование</a>
+            <img src="img/file.png">
+            <a href="javascript:" class="btn btn-invite" onclick="">Открыть документ</a>
         </div>
     </section>
-    <section class="main-block paper">
+    <section class="main-block video">
+        <div class="videoWrapper">
+            <iframe   src="https://www.youtube.com/embed/xFa2_PVMeDQ" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </section>
+    <!--section class="main-block paper">
         <div class="main-title">White Paper</div>
         <!--div class="post-title">
             Lorem ipsum dolor sit amet
         </div-->
-        <div class="text-paper">
+        <!--div class="text-paper">
             Оцените наш проект, оценив инвестиционную привлекательность и надежность стратегического плана
         </div>
         <a href="#" class="btn btn-document">Открыть документ</a>
-    </section>
+    </section-->
     <section class="main-block road">
         <div class="main-title">Roadmap</div>
         <div class="road-map">
             <div class="road-conteiner">
                 <div class="road-one-block">
-                    <div><img src="img/road1.svg"></div>
-                    <div>Pre-ICO</div>
+                    <div class="data">Август 2017</div>
+                    <div class="img"><img src="img/road1.png"></div>
+                    <div class="desk">Pre-ICO</div>
                 </div>
                 <div class="road-dot">
                     <img src="img/RoadmapDot.svg">
@@ -89,8 +101,9 @@
             </div>
             <div class="road-conteiner">
                 <div class="road-one-block">
-                    <div><img src="img/road2.svg"></div>
-                    <div>ICO</div>
+                    <div class="data">Октябрь 2017</div>
+                    <div class="img"><img src="img/road2.png"></div>
+                    <div class="desk">ICO</div>
                 </div>
                 <div class="road-dot">
                     <img src="img/RoadmapDot.svg">
@@ -98,8 +111,9 @@
                 </div>
             <div class="road-conteiner">
                 <div class="road-one-block">
-                    <div><img src="img/road3.svg"></div>
-                    <div>Технические работы</div>
+                    <div class="data">Апрель 2017</div>
+                    <div class="img"><img src="img/road3.png"></div>
+                    <div class="desk">Технические работы</div>
                 </div>
                 <div class="road-dot">
                     <img src="img/RoadmapDot.svg">
@@ -107,8 +121,9 @@
                 </div>
             <div class="road-conteiner">
                 <div class="road-one-block">
-                    <div><img src="img/road4.svg"></div>
-                    <div>Разработка карьера</div>
+                    <div class="data">Май 2017</div>
+                    <div class="img"><img src="img/road4.png"></div>
+                    <div class="desk">Разработка карьера</div>
                 </div>
                 <div class="road-dot">
                     <img src="img/RoadmapDot.svg">
@@ -116,8 +131,9 @@
                 </div>
             <div class="road-conteiner">
                 <div class="road-one-block">
-                    <div><img src="img/road5.svg"></div>
-                    <div>Обратный выкуп SND</div>
+                    <div class="data">Июль 2017</div>
+                    <div class="img"><img src="img/road5.png"></div>
+                    <div class="desk">Обратный выкуп SND</div>
                 </div>
                 <div class="road-dot">
                     <img src="img/RoadmapDot.svg">
@@ -125,8 +141,9 @@
                 </div>
             <div class="road-conteiner">
                 <div class="road-one-block">
-                    <div><img src="img/road6.svg"></div>
-                    <div>Подключение партнеров</div>
+                    <div class="data">Февраль 2019</div>
+                    <div class="img"><img src="img/road6.png"></div>
+                    <div class="desk">Подключение партнеров</div>
                 </div>
                 <div class="road-dot">
                     <img src="img/RoadmapDot.svg">
@@ -134,14 +151,9 @@
                 </div>
             <div class="road-conteiner">
                 <div class="road-one-block">
-                    <div><img src="img/road7.svg"></div>
-                    <div>Разработка II карьера</div>
-                </div>
-                <div class="road-dot">
-                    <img src="img/RoadmapDot.svg">
-                </div>
-                <div class="road-arrow">
-                    <img src="img/RoadmapArrow.svg">
+                    <div class="data">2020</div>
+                    <div class="img"><img src="img/road7.png"></div>
+                    <div class="desk">Разработка II карьера</div>
                 </div>
             </div>
         </div>
@@ -156,6 +168,7 @@
             </div>
             <div class="name">Руслан Пичугин</div>
             <div class="job">CTO, telegram - @Ryonion</div>
+            <div class="soc"><img src="img/Facebook1x.png" width="20px"><img src="img/Telegram1x.png" width="23px"></div>
         </div>
         <div class="one-person">
             <div class="photo">
@@ -163,6 +176,7 @@
             </div>
             <div class="name">Грачков Кирилл</div>
             <div class="job">COO</div>
+            <div class="soc"><img src="img/Facebook1x.png" width="20px"><img src="img/Telegram1x.png" width="23px"></div>
         </div>
         <div class="one-person">
             <div class="photo">
@@ -170,8 +184,29 @@
             </div>
             <div class="name">Лев Лейман</div>
             <div class="job">CMO, telegram - @lLeiman</div>
+            <div class="soc"><img src="img/Facebook1x.png" width="20px"><img src="img/Telegram1x.png" width="23px"></div>
         </div>
 
+    </section>
+    <section class="main-block publ-life">
+        <div class="main-title">Публичная жизнь</div>
+
+        <div class="one-life">
+            <div class="top">
+                <a href=""><img src="img/you-tube.png"></a>
+                <span class="date">15 Июля 2017</span>
+            </div>
+            <div class="prev"><a href="">Конференция в Ростове</a></div>
+            <div class="desk">Наше первое выступление</div>
+        </div>
+        <!--вариант с картинкой-->
+        <!--div class="one-life"> 
+            <div class="top">
+                <a href=""><img src="img/you-tube.png"></a>
+                <span class="date">15 Июля 2017</span>
+            </div>
+            <div class="prev"><a href=""><img src="img/lev.jpg" width="280px" height="150px"></a></div>
+        </div-->
     </section>
     <div class="border-line"></div>
 	<footer class="main-block">
@@ -181,8 +216,9 @@
             <div class="soc-footer">
                 <a target="_blank" href="https://twitter.com/sandcoin"><img src="img/Twitter1x.png"></a>
                 <a target="_blank" href="https://www.facebook.com/cryptosandcoin/"><img src="img/Facebook1x.png"></a>
-                <a target="_blank" href="https://vk.com/sandcoin"><img src="img/vk_logo.png" width="25px"></a>
+                <a target="_blank" href="https://vk.com/sandcoin"><img src="img/vk_logo.png"></a>
                 <a target="_blank" href="https://web.telegram.org/#/im?p=@sandcoinru"><img src="img/Telegram1x.png"></a>
+                <a target="_blank" href="https://github.com/sndtoken/ico"><img src="img/github-logo.png"></a>
             </div>
             </div>
         </div>   
@@ -192,7 +228,7 @@
             <div>Email: <a href="mailto:ico@sandcoin.io">ico@sandcoin.io</a></div>
         </div>   
         <div class="title-footer">
-            <div>Sandcoin, LLC © 2017</div>
+            <div>Sandcoin © 2017</div>
             <a class="nova" target="_blank" href="http://xn--80acbbp8bh.xn--p1ai/">Веб-Студия "НоваВеб"</a>
         </div>
     </footer>
@@ -203,12 +239,6 @@
         <div class="close-notify">×</div>
         <div>Мы обнаружили, что у вас стоит русская локаль, хотите посмотреть сайт на русском?</div>
         <a href="index.html">Русская версия сайта</a>
-    </div>
-
-    <div class="notify close-all zh">
-        <div class="close-notify">×</div>
-        <div>asdgsfs?</div>
-        <a href="index_zh.html">sfsf</a>
     </div>
 
     <div class="notify close-all en">
@@ -227,8 +257,7 @@
             }
 
             str = navigator.language || navigator.browserLanguage;
-            str1 = "qwe"
-            if( (str.indexOf('en') + 1) || (str.indexOf('EN') + 1)){
+            if( (str.indexOf('en') + 1) || (str.indexOf('EN') + 1) || (str.indexOf('En') + 1)){
                     $(".en").removeClass("close-all");
 
             }
@@ -237,9 +266,9 @@
         $("body").on("click",".close-notify", function(){
             $(".notify").addClass("close-all")
         })
-
+// TODO url
     function reestablP() {
-        var form = $("#form").serialize();
+        var form = $("#app-form").serialize();
         $.ajax({
             type: "POST",
             url: "/URL/",

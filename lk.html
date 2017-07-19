@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/index.css" rel="stylesheet">
+    <link href="css/lk.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <title>Sand Coin</title>
+    <link rel="icon" type="image/png" href="SNDlogo.png" />
+    <link rel="apple-touch-icon" href="SNDlogo.png"/>
+    <script type="text/javascript" src="js/megatimer.min.js"></script>
+</head>
+<body>
+    <div class="popup-bg close-popup">
+        <div class="popup">
+            <div class="close-cross" onclick="closePopup()"><span>×</span></div>
+            <div class="title">Оставить заявку</div>
+            <form method="post" id="app-form" action="javascript:void(null);" onsubmit="reestablP()">
+                <input type="text" name="" placeholder="Имя" required>
+                <input type="text" name="" placeholder="Сумма" required>
+                <input type="email" name="" placeholder="E-mail" required>
+                <div id="subm"><button type="submit">Отправить</button></div>
+            </form>
+
+        </div>
+    </div>
+	<nav class="main-block">
+        <div class="nav-block">
+            <img src="img/SNDlogo.png">
+            <div class="logo">SAND COIN</div>
+        </div>
+        <div class="nav-block">
+            <a href="index.html">Главная</a>
+            <a href="#" class="main-link">Личный кабинет</a>
+            <a href="index.html" class="main-link-lang link-lang"><img src="img/RU.png" width="25px" height="13px">RU</a>
+            <span class="re">|</span>
+            <a href="index_EN.html" class="link-lang"><img src="img/EN.png"  width="25px" height="13px">EN</a>
+        </div>   
+    </nav>
+    <div class="lk0">
+        <section class="main-block lk">
+            <div class="main-title"><img src="img/person.png">Личный кабинет</div> 
+            <div class="list"><div class="list-title">ID:</div><div class="list-cont">45</div></div>
+            <div class="list"><div class="list-title">Name:</div><div class="list-cont">Рустам</div></div>
+            <div class="list"><div class="list-title">Email:</div><div class="list-cont"><span tittle="redeye45@mail.ru">redeye45@mail.ru</span></div></div>
+            <div class="list"><div class="list-title">Member Since:</div><div class="list-cont">July 17, 2017 07:38</div></div>
+            <div class="list"><div class="list-title">Amount:</div><div class="list-cont">20000</div></div>
+        </section>
+    </div>
+    <div class="border-line"></div>
+	<footer class="main-block">
+        <div>
+            <div class="title-footer">Мы в социальных сетях:</div>
+            <div class="soc-footer">
+            <div class="soc-footer">
+                <a target="_blank" href="https://twitter.com/sandcoin"><img src="img/Twitter1x.png"></a>
+                <a target="_blank" href="https://www.facebook.com/cryptosandcoin/"><img src="img/Facebook1x.png"></a>
+                <a target="_blank" href="https://vk.com/sandcoin"><img src="img/vk_logo.png"></a>
+                <a target="_blank" href="https://web.telegram.org/#/im?p=@sandcoinru"><img src="img/Telegram1x.png"></a>
+                <a target="_blank" href="https://github.com/sndtoken/ico"><img src="img/github-logo.png"></a>
+            </div>
+            </div>
+        </div>   
+        <div class="contacts-footer">
+            <div class="title-footer">Контакты:</div>
+            <!--div>Тел: +1 234 567 890 12</div-->
+            <div>Email: <a href="mailto:ico@sandcoin.io">ico@sandcoin.io</a></div>
+        </div>   
+        <div class="title-footer">
+            <div>Sandcoin © 2017</div>
+            <a class="nova" target="_blank" href="http://xn--80acbbp8bh.xn--p1ai/">Веб-Студия "НоваВеб"</a>
+        </div>
+    </footer>
+
+
+
+<div class="notify close-all ru">
+        <div class="close-notify">×</div>
+        <div>Мы обнаружили, что у вас стоит русская локаль, хотите посмотреть сайт на русском?</div>
+        <a href="index.html">Русская версия сайта</a>
+    </div>
+
+ 
+
+    <div class="notify close-all en">
+        <div class="close-notify">×</div>
+        <div>We found that you have an English locale, do you want to see the site in English?</div>
+        <a href="index_en.html">English version of the site</a>
+    </div>
+
+
+
+     <script type="text/javascript">
+        function changeLng(){
+           var str = navigator.language || navigator.browserLanguage;
+            if((str.indexOf('zh') + 1) || (str.indexOf('ZH') + 1)){
+                    $(".zh").removeClass("close-all")
+            }
+
+            str = navigator.language || navigator.browserLanguage;
+            if( (str.indexOf('en') + 1) || (str.indexOf('EN') + 1) || (str.indexOf('En') + 1)){
+                    $(".en").removeClass("close-all");
+
+            }
+        }
+    }
+        changeLng();
+        $("body").on("click",".close-notify", function(){
+            $(".notify").addClass("close-all")
+        })
+
+    function closePopup(){
+        $(".popup-bg").addClass("close-popup");
+    }
+
+    function popup(){
+        $(".popup-bg").removeClass("close-popup");
+    }
+</script>
+</body>
+</html>
