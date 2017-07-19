@@ -669,17 +669,10 @@ header.main-block{
   padding:0px;
   width: calc(100% - 8px);
   .videoWrapper {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 */
-    padding-top: 25px;
-    height: 0;
     width: 940px;
     height: 534px;
   }
   .videoWrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
   }
@@ -745,4 +738,19 @@ a.btn-lk:focus{
   color:white ;
   text-decoration: none !important;
   opacity: .8;
+}
+.main-block.road{
+  padding-bottom:0px !important;
+}
+.main-block.road .road-map .road-conteiner{
+  margin-bottom:24px !important;
+}
+@media(max-width:502px){
+  .main-block.road .road-map .road-one-block  {
+    .data, .img{
+      margin-bottom:5px;
+    }
+
+  }
+
 }
