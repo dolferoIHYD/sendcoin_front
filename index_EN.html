@@ -288,10 +288,11 @@
             var form = $("#app-form").serialize();
             $.ajax({
                 type: "POST",
-                url: "/create_reques",
+                url: "/create_request",
                 data: form,
                 success: function () {
                     $('#subm').fadeOut(1).html('<div class="success">Thanks for the left application</div>').fadeIn("slow");
+                    document.getElementById("app-form").reset();
                 },
                 error: function () {
                     alert("Server error");

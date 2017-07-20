@@ -273,6 +273,7 @@
                 data: form,
                 success: function () {
                     $('#subm').fadeOut(1).html('<div class="success">Спасибо за оставленную заявку</div>').fadeIn("slow");
+                    document.getElementById("app-form").reset();
                 },
                 error: function () {
                     alert("Ошибка сервера");
