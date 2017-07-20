@@ -86,7 +86,9 @@ a {
   .nav-block a:focus {
     text-decoration: underline;
     color: #af834d; }
-
+  .nav-block:hover{
+    text-decoration: none;
+  }
 nav.main-block {
   display: flex;
   justify-content: space-between;

@@ -97,6 +97,9 @@ a{
     text-decoration: underline;
     color: $gold;
   }
+  &:hover{
+    text-decoration: none;
+  }
 }
 nav.main-block{
   display: flex;

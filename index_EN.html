@@ -12,33 +12,31 @@
     <script type="text/javascript" src="js/megatimer.min.js"></script>
 </head>
 <body>
-<div class="popup-bg close-popup">
+    <div class="popup-bg close-popup">
         <div class="popup">
             <div class="close-cross" onclick="closePopup()"><span>×</span></div>
             <div class="title">Please leave your investment request here</div>
              <!-- TODO name for input -->
             <form method="post" id="app-form" action="javascript:void(null);" onsubmit="reestablP()">
-                <input type="text" name="" placeholder="Name" required>
-                <input type="number" name="" placeholder="Amount" required>
-                <input type="email" name="" placeholder="E-mail" required>
+                <input type="text" name="request[name]" placeholder="Name" required>
+                <input type="number" name="request[amount]" placeholder="Amount $" required>
+                <input type="email" name="request[email]" placeholder="E-mail" required>
                 <div id="subm"></dir><button type="submit" >Submit</button></div>
             </form>
 
         </div>
     </div>
 	<nav class="main-block">
-        <div class="nav-block">
+        <a href="/en" class="nav-block">
             <img src="img/SNDlogo.png">
             <div class="logo">SAND COIN</div>
-        </div>
+        </a>
         <div class="nav-block">
-            <a class="main-link" href="#">Home</a>
-            <a href="lk_EN.html">My profile</a>
-            <a href="index.html" class="link-lang"><img src="img/RU.png" width="25px" height="13px">
-            RU
-            </a>
+            <a class="main-link" href="/en">Home</a>
+            <a href="/profile"></a>
+            <a href="/" class="link-lang"><img src="img/RU.png" width="25px" height="13px">RU</a>
             <span class="re">|</span>
-            <a href="index_EN.html" class="main-link-lang link-lang"><img src="img/EN.png"  width="25px" height="13px">EN</a>
+            <a href="/en" class="main-link-lang link-lang"><img src="img/EN.png"  width="25px" height="13px">EN</a>
         </div>   
     </nav>
 	<header class="main-block">
@@ -47,7 +45,7 @@
             <div class="text">
                 Physical projects, unlike cloud technologies, have great reliability in terms of reinforcement of derivatives with a long history of their existence and an understandable implementation scheme.
             </div>
-            <a href="" class="btn btn-lk">Participate</a>
+            <a href="javascript:" onclick="popup()" class="btn btn-lk">Participate</a>
         </div> 
         <div class="big-coin"><img src="img/3d 1x.png"></div>    
     </header>
@@ -69,7 +67,12 @@
                 Evaluate our project and make sure of the reliability of investments
             </div>
             <img src="img/file.svg">
-            <a href="javascript:" class="btn btn-invite" onclick="">Open document</a>
+            <a href="/WhitePaperSND_en.pdf" target="_blank" class="btn btn-invite">Open document</a>
+        </div>
+    </section>
+    <section class="main-block video">
+        <div class="videoWrapper">
+            <iframe src="https://www.youtube.com/embed/KTz7WDXiaZY" frameborder="0" allowfullscreen></iframe>
         </div>
     </section>
 	<!--section class="main-block timer-block">
@@ -98,11 +101,11 @@
         </div>
         <a href="#" class="btn btn-document">Open the document</a>
     </section-->
-    <section class="main-block video">
+    <!--<section class="main-block video">
         <div class="videoWrapper">
             <iframe   src="https://www.youtube.com/embed/xFa2_PVMeDQ" frameborder="0" allowfullscreen></iframe>
         </div>
-    </section>
+    </section>-->
         <section class="main-block road">
         <div class="main-title">Roadmap</div>
         <div class="road-map">
@@ -178,40 +181,40 @@
     <section id="team" class="main-block">
         <div class="main-title">Оur team</div>
         <div class="one-person">
-            <div class="photo">
+            <a target="_blank" href="https://t.me/Ryonion" class="photo">
                <img src="img/rus.jpg">
-            </div>
+            </a>
             <div class="name">Ruslan Pichugin</div>
-            <div class="job">CTO</div>
-            <div class="soc">
+            <div class="job">CEO</div>
+            <!--<div class="soc">
                 <a target="_blank"><img src="img/facebook.svg" width="20px"></a>
                 <a target="_blank" href="https://web.telegram.org/#/im?p=@Ryonion" ><img src="img/telegram.svg" width="23px"></a>
-            </div>
+            </div>-->
         </div>
         <div class="one-person">
-            <div class="photo">
+            <a target="_blank" href="http://www.mosbetcom.ru" class="photo">
                 <img src="img/2.jpeg">
-            </div>
+            </a>
             <div class="name">Grachkov Kirill</div>
             <div class="job">COO</div>
-            <div class="soc">
+            <!--<div class="soc">
                 <a target="_blank"><img src="img/facebook.svg" width="20px"></a>
                 <a target="_blank"><img src="img/telegram.svg" width="23px"></a>
-            </div>
+            </div>-->
         </div>
         <div class="one-person">
-            <div class="photo">
-                <img src="img/lev.jpeg">
-            </div>
-            <div class="name">Lev Leiman</div>
+            <a target="_blank" href="https://t.me/EduardEgorov" class="photo">
+                <img src="img/eduard.jpg">
+            </a>
+            <div class="name">Eduard Egorov</div>
             <div class="job">CMO</div>
-            <div class="soc">
+            <!--<div class="soc">
                 <a target="_blank"><img src="img/facebook.svg" width="20px"></a>
-                <a target="_blank" href="https://web.telegram.org/#/im?p=@lLeiman" ><img src="img/telegram.svg" width="23px"></a>
-            </div>
+                <a target="_blank" href="https://t.me/lLeiman" ><img src="img/telegram.svg" width="23px"></a>
+            </div>-->
         </div>
     </section>
-    <section class="main-block publ-life">
+    <!---<section class="main-block publ-life">
         <div class="main-title">Public life</div>
 
         <div class="one-life">
@@ -230,14 +233,14 @@
             <div class="prev"><a href=""><img src="img/lev.jpg" width="280px" height="150px"></a></div>
             <div class="desk">Our first performance!</div>
         </div>
-    </section>
+    </section>-->
     <div class="border-line"></div>
 	<footer class="main-block">
         <div>
             <div class="title-footer">We are in social networks:</div>
             <div class="soc-footer">
                 <a target="_blank" href="https://twitter.com/sandcoin"><img src="img/twitter.svg"></a>
-                <a target="_blank" href="https://www.facebook.com/cryptosandcoin/"><img src="img/facebook.svg"></a>
+                <a target="_blank" href="https://www.facebook.com/SandCoinICO"><img src="img/facebook.svg"></a>
                 <a target="_blank" href="https://vk.com/sandcoin"><img src="img/vk.svg"></a>
                 <a target="_blank" href="https://t.me/sandcoin"><img src="img/telegram.svg"></a>
                 <a target="_blank" href="https://github.com/sndtoken/ico"><img src="img/github-logo.svg"></a>
@@ -260,19 +263,13 @@
 <div class="notify close-all ru">
         <div class="close-notify">×</div>
         <div>Мы обнаружили, что у вас стоит русская локаль, хотите посмотреть сайт на русском?</div>
-        <a href="index.html">Русская версия сайта</a>
-    </div>
-
-    <div class="notify close-all zh">
-        <div class="close-notify">×</div>
-        <div>asdgsfs?</div>
-        <a href="index_zh.html">sfsf</a>
+        <a href="/ru">Русская версия сайта</a>
     </div>
 
     <div class="notify close-all en">
         <div class="close-notify">×</div>
         <div>We found that you have an English locale, do you want to see the site in English?</div>
-        <a href="index_en.html">English version of the site</a>
+        <a href="/en">English version of the site</a>
     </div>
 
 
@@ -280,45 +277,36 @@
     
 
      <script type="text/javascript">
-        function changeLng(){
-           var str = navigator.language || navigator.browserLanguage;
-            if((str.indexOf('zh') + 1) || (str.indexOf('ZH') + 1)){
-                    $(".zh").removeClass("close-all")
-            }
-
-            str = navigator.language || navigator.browserLanguage;
-            if( (str.indexOf('ru') + 1) || (str.indexOf('RU') + 1) || (str.indexOf('Ru') + 1)){
-                    $(".ru").removeClass("close-all");
-
-            }
+        var str = navigator.language || navigator.browserLanguage;
+        if( (str.indexOf('ru') + 1) || (str.indexOf('RU') + 1) || (str.indexOf('Ru') + 1)){
+            $(".ru").removeClass("close-all");
         }
-        changeLng();
         $("body").on("click",".close-notify", function(){
-            $(".notify").addClass("close-all")
-        })
-// TODO url
-        function reestablP() {
-        var form = $("#app-form").serialize();
-        $.ajax({
-            type: "POST",
-            url: "/URL/",
-            data: form,
-            success: function () {
-                $('#subm').fadeOut(1).html('<div class="success">Thanks for the left application</div>').fadeIn("slow");
-            },
-            error: function () {
-                alert("Server error");
-            }
+            $(".notify").addClass("close-all");
         });
-    }
 
-    function closePopup(){
-        $(".popup-bg").addClass("close-popup");
-    }
+        function reestablP() {
+            var form = $("#app-form").serialize();
+            $.ajax({
+                type: "POST",
+                url: "/create_reques",
+                data: form,
+                success: function () {
+                    $('#subm').fadeOut(1).html('<div class="success">Thanks for the left application</div>').fadeIn("slow");
+                },
+                error: function () {
+                    alert("Server error");
+                }
+            });
+        }
 
-    function popup(){
-        $(".popup-bg").removeClass("close-popup");
-    }
-</script>
+        function closePopup(){
+            $(".popup-bg").addClass("close-popup");
+        }
+
+        function popup(){
+            $(".popup-bg").removeClass("close-popup");
+        }
+    </script>
 </body>
 </html>
