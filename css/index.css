@@ -436,6 +436,8 @@ a:focus {
         line-height: 23px;
         position: relative;
         top: -1px; }
+    .popup-bg .popup .close-cross:hover {
+      opacity: .8; }
     .popup-bg .popup .title {
       padding: 0 20px;
       font-size: 22px;
@@ -445,12 +447,15 @@ a:focus {
     .popup-bg .popup form#app-form {
       display: flex;
       flex-direction: column;
-      align-items: center; }
-      .popup-bg .popup form#app-form > input {
-        margin-bottom: 10px;
+      align-items: center;
+      justify-content: center; }
+      .popup-bg .popup form#app-form input {
+        margin-bottom: 30px;
         padding: 7px;
         border: solid 2px #af834d;
-        border-radius: 3px; }
+        border-radius: 3px;
+        width: calc(100% - 14px);
+        height: 20px; }
       .popup-bg .popup form#app-form button {
         display: flex;
         justify-content: center;
@@ -607,5 +612,22 @@ a.btn-lk:focus {
 @media (max-width: 502px) {
   .main-block.road .road-map .road-one-block .data, .main-block.road .road-map .road-one-block .img {
     margin-bottom: 5px; } }
+.input-overlay {
+  width: 100%;
+  min-width: 260px;
+  position: relative; }
+  .input-overlay .wrong-input {
+    display: none;
+    color: crimson;
+    position: absolute;
+    top: 38px;
+    left: 0;
+    width: 100%;
+    text-align: center; }
+
+.input-overlay.wrong input {
+  border: 2px solid crimson !important; }
+.input-overlay.wrong .wrong-input {
+  display: block; }
 
 /*# sourceMappingURL=index.css.map */

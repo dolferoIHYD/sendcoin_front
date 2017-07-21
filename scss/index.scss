@@ -545,6 +545,10 @@ a:focus{
 
       }
     }
+    .close-cross:hover{
+      opacity: .8;
+    }
+
     .title{
       padding: 0 20px;
       font-size:22px;
@@ -556,11 +560,14 @@ a:focus{
       display:flex;
       flex-direction:column;
       align-items:center;
-      >input{
-        margin-bottom:10px;
+      justify-content: center;
+       input{
+        margin-bottom:30px;
         padding: 7px;
         border: solid 2px #af834d;
         border-radius: 3px;
+        width: calc(100% - 14px);
+        height: 20px;
       }
       button{
         display: flex;
@@ -753,4 +760,29 @@ a.btn-lk:focus{
 
   }
 
+}
+.input-overlay{
+  width: 100%;
+  min-width: 260px;
+  position:relative;
+
+  .wrong-input{
+    display: none;
+    color:crimson;
+    position:absolute;
+    top:38px;
+    left: 0;
+    width: 100%;
+    text-align:center;
+  }
+}
+.input-overlay.wrong{
+
+  input{
+    border:2px solid crimson !important;
+  }
+
+  .wrong-input{
+    display: block;
+  }
 }

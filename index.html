@@ -18,12 +18,22 @@
             <div class="title">Оставить заявку на инвестирование в Pre-ICO</div>
             <!-- TODO name for input -->
             <form method="post" id="app-form" action="javascript:void(null);" onsubmit="reestablP()">
-                <input type="text" name="" placeholder="Имя" required>
-                <input type="number" name="" placeholder="Сумма($)" required>
-                <input type="email" name="" placeholder="E-mail" required>
-                <div id="subm"><button type="submit">Отправить</button></div>
+                <div class="input-overlay">
+                    <input class="app-input" type="text" name="" placeholder="Имя">
+                    <div class="wrong-input">Поле пустое</div>
+                </div>
+                <div class="input-overlay">
+                    <input id="number-input" class="app-input" type="number" name="" placeholder="Сумма($)">
+                    <div class="wrong-input">Поле пустое</div>
+                </div>
+                <div class="input-overlay">
+                    <input type="email" name="" id="mail" placeholder="E-mail">
+                    <div class="wrong-input">Введите корректную почту</div>
+                </div>
+                <div id="subm">
+                    <button id="btn-sbm" type="submit">Отправить</button>
+                </div>
             </form>
-
         </div>
     </div>
 	<nav class="main-block">
@@ -256,7 +266,6 @@
     </div>
 
 
-
      <script type="text/javascript">
         function changeLng(){
            var str = navigator.language || navigator.browserLanguage;
@@ -276,19 +285,44 @@
         })
 // TODO url
     function reestablP() {
-        var form = $("#app-form").serialize();
-        $.ajax({
-            type: "POST",
-            url: "/URL/",
-            data: form,
-            success: function () {
-                $('#subm').fadeOut(1).html('<div class="success">Спасибо за оставленную заявку</div>').fadeIn("slow");
-            },
-            error: function () {
-                alert("Ошибка сервера");
+        $("#btn-sbm").prop("disabled",true);
+        var pattern = /^.+@.+\..+/i;
+        var check = true;
 
+        $("#app-form").find(".input-overlay").each(function () {
+            $(this).removeClass("wrong");
+        });   
+
+        if ($("#mail").val().search(pattern) !== 0) {
+            $("#mail").parent(".input-overlay").addClass("wrong");
+            check = false;
+        }
+
+        $("#app-form").find(".app-input").each(function () {
+            if ($(this).val() == "") {
+                $(this).parent(".input-overlay").addClass("wrong");
+                check = false;
             }
+
         });
+
+        if(check){
+            var form = $("#app-form").serialize();
+            $.ajax({
+                type: "POST",
+                url: "/URL/",
+                data: form,
+                success: function () {
+                    $('#subm').fadeOut(1).html('<div class="success">Спасибо за оставленную заявку</div>').fadeIn("slow");
+                },
+                error: function () {
+                    alert("Ошибка сервера");
+
+                }
+            });
+        }
+
+        $("#btn-sbm").prop("disabled",false);
     }
     
     function closePopup(){
@@ -299,5 +333,27 @@
         $(".popup-bg").removeClass("close-popup");
     }
 </script>
+ <script>
+    document.getElementById("number-input").onkeypress = function(e) {
+      e = e || event;
+      if (e.ctrlKey || e.altKey || e.metaKey) return;
+      var chr = getChar(e);
+      if (chr == null) return;
+      if (chr < '0' || chr > '9') {
+        return false;
+      }
+    }
+    function getChar(event) {
+      if (event.which == null) {
+        if (event.keyCode < 32) return null;
+        return String.fromCharCode(event.keyCode)
+      }
+      if (event.which != 0 && event.charCode != 0) {
+        if (event.which < 32) return null;
+        return String.fromCharCode(event.which)
+      }
+      return null;
+    }
+  </script>
 </body>
 </html>
