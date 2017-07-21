@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/index.css" rel="stylesheet">
+    <link href="css/index.css?1" rel="stylesheet">
     <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
     <title>Sand Coin</title>
     <link rel="icon" type="image/png" href="SNDlogo.png" />
@@ -19,15 +19,15 @@
             <!-- TODO name for input -->
             <form method="post" id="app-form" action="javascript:void(null);" onsubmit="reestablP()">
                 <div class="input-overlay">
-                    <input class="app-input" type="text" name="" placeholder="Имя">
+                    <input class="app-input" type="text"name="request[name]" placeholder="Имя">
                     <div class="wrong-input">Поле пустое</div>
                 </div>
                 <div class="input-overlay">
-                    <input id="number-input" class="app-input" type="number" name="" placeholder="Сумма($)">
+                    <input id="number-input" class="app-input" type="number" name="request[amount]" placeholder="Сумма($)">
                     <div class="wrong-input">Поле пустое</div>
                 </div>
                 <div class="input-overlay">
-                    <input type="email" name="" id="mail" placeholder="E-mail">
+                    <input type="email" id="mail" ame="request[email]" placeholder="E-mail">
                     <div class="wrong-input">Введите корректную почту</div>
                 </div>
                 <div id="subm">
@@ -37,16 +37,16 @@
         </div>
     </div>
 	<nav class="main-block">
-        <div class="nav-block">
+        <a href="/" class="nav-block">
             <img src="img/SNDlogo.png">
             <div class="logo">SAND COIN</div>
-        </div>
+        </a>
         <div class="nav-block">
-            <a class="main-link" href="#">Главная</a>
-            <a href="lk.html">Личный кабинет</a>
-            <a href="index.html" class="main-link-lang link-lang"><img src="img/RU.png" width="25px" height="13px">RU</a>
+            <a class="main-link" href="/"></a>
+            <a href="/profile"></a>
+            <a href="/" class="main-link-lang link-lang"><img src="img/RU.png" width="25px" height="13px">RU</a>
             <span class="re">|</span>
-            <a href="index_EN.html" class="link-lang"><img src="img/EN.png"  width="25px" height="13px">EN</a>
+            <a href="/en" class="link-lang"><img src="img/EN.png"  width="25px" height="13px">EN</a>
         </div>   
     </nav>
 	<header class="main-block">
@@ -55,9 +55,9 @@
             <div class="text">
                 Физические проекты, в отличии от облачных технологий, имеют большую надёжность в плане подкрепления деривативов продолжительной историей своего существования
             </div>
-            <a href="" class="btn btn-lk">Участвовать</a>
+            <a href="javascript:" onclick="popup()" class="btn btn-lk">Участвовать</a>
         </div> 
-        <div class="big-coin"><img src="img/3d 1x.png" width="200px"></div>    
+        <div class="big-coin"><img src="img/3d 1x.png" width="200px"></div>
     </header>
     <div class="border-line"></div>
 	<section class="main-block timer-block">
@@ -69,7 +69,7 @@
                 <!--script src="http://megatimer.ru/s/ba45ac33f8cef97cdfe2c2ae86814859.js"></script-->
             </div>
             <div class="timer-text">Самое выгодное предложение для ранних инвесторов, которое дает возможность получить ощутимый доход в первые дни появления токена на бирже.</div>
-            <div class="timer-text">Продажа наших токенов будет проходить в режиме реального времени на масштабной конференции посвящённой блок-чейн технологии в самом сердце Санк-Петербурга</div>
+            <div class="timer-text">Продажа наших токенов будет проходить в режиме реального времени на масштабной конференции посвящённой блок-чейн технологии в Москве.</div>
             <a href="javascript:" class="btn btn-invite" onclick="popup()">Оставить заявку</a>
         </div>
         <div class="invite-timer">
@@ -78,12 +78,12 @@
                 Оцените наш проект, оценив инвестиционную привлекательность и надежность стратегического плана
             </div>
             <img src="img/file.svg">
-            <a href="javascript:" class="btn btn-invite" onclick="">Открыть документ</a>
+            <a href="/WhitePaperSND.pdf" target="_blank" class="btn btn-invite">Открыть документ</a>
         </div>
     </section>
     <section class="main-block video">
         <div class="videoWrapper">
-            <iframe   src="https://www.youtube.com/embed/xFa2_PVMeDQ" frameborder="0" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/KTz7WDXiaZY" frameborder="0" allowfullscreen></iframe>
         </div>
     </section>
     <!--section class="main-block paper">
@@ -173,41 +173,41 @@
         <div class="main-title">Оur team</div>
 
         <div class="one-person">
-            <div class="photo">
+            <a target="_blank" href="https://t.me/Ryonion" class="photo">
                 <img src="img/rus.jpg">
-            </div>
+            </a>
             <div class="name">Руслан Пичугин</div>
-            <div class="job">CTO</div>
-            <div class="soc">
+            <div class="job">CEO</div>
+            <!--<div class="soc">
                 <a target="_blank"><img src="img/facebook.svg" width="20px"></a>
-                <a target="_blank" href="https://web.telegram.org/#/im?p=@Ryonion" ><img src="img/telegram.svg" width="23px"></a>
-            </div>
+                <a target="_blank" href="https://t.me/Ryonion" ><img src="img/telegram.svg" width="23px"></a>
+            </div>-->
         </div>
         <div class="one-person">
-            <div class="photo">
+            <a target="_blank" href="http://www.mosbetcom.ru" class="photo">
                 <img src="img/2.jpeg">
-            </div>
+            </a>
             <div class="name">Грачков Кирилл</div>
             <div class="job">COO</div>
-            <div class="soc">
+            <!--<div class="soc">
                 <a target="_blank"><img src="img/facebook.svg" width="20px"></a>
                 <a target="_blank"><img src="img/telegram.svg" width="23px"></a>
-            </div>
+            </div>-->
         </div>
         <div class="one-person">
-            <div class="photo">
-                <img src="img/lev.jpeg">
-            </div>
-            <div class="name">Лев Лейман</div>
+            <a target="_blank" href="https://t.me/EduardEgorov" class="photo">
+                <img src="img/eduard.jpg">
+            </a>
+            <div class="name">Эдуард Егоров</div>
             <div class="job">CMO</div>
-            <div class="soc">
+            <!--<div class="soc">
                 <a target="_blank"><img src="img/facebook.svg" width="20px"></a>
                 <a target="_blank" href="https://web.telegram.org/#/im?p=@lLeiman" ><img src="img/telegram.svg" width="23px"></a>
-            </div>
+            </div>-->
         </div>
 
     </section>
-    <section class="main-block publ-life">
+    <!--<section class="main-block publ-life">
         <div class="main-title">Публичная жизнь</div>
 
         <div class="one-life">
@@ -226,16 +226,16 @@
             <div class="prev"><a href=""><img src="img/lev.jpg" width="280px" height="150px"></a></div>
             <div class="desk">Наше первое выступление!</div>
         </div>
-    </section>
+    </section>-->
     <div class="border-line"></div>
 	<footer class="main-block">
         <div>
             <div class="title-footer">Мы в социальных сетях:</div>
             <div class="soc-footer">
                 <a target="_blank" href="https://twitter.com/sandcoin"><img src="img/twitter.svg"></a>
-                <a target="_blank" href="https://www.facebook.com/cryptosandcoin/"><img src="img/facebook.svg"></a>
+                <a target="_blank" href="https://www.facebook.com/SandCoinICO"><img src="img/facebook.svg"></a>
                 <a target="_blank" href="https://vk.com/sandcoin"><img src="img/vk.svg"></a>
-                <a target="_blank" href="https://web.telegram.org/#/im?p=@sandcoinru"><img src="img/telegram.svg"></a>
+                <a target="_blank" href="https://t.me/sandcoinru"><img src="img/telegram.svg"></a>
                 <a target="_blank" href="https://github.com/sndtoken/ico"><img src="img/github-logo.svg"></a>
             </div>
             <div>Наш токен отвечает стандарту ERC20</div>
@@ -247,7 +247,6 @@
         </div>   
         <div class="title-footer">
             <div>Sandcoin © 2017</div>
-            <a class="nova" target="_blank" href="http://xn--80acbbp8bh.xn--p1ai/">Веб-Студия "НоваВеб"</a>
         </div>
     </footer>
 
@@ -256,30 +255,21 @@
 <div class="notify close-all ru">
         <div class="close-notify">×</div>
         <div>Мы обнаружили, что у вас стоит русская локаль, хотите посмотреть сайт на русском?</div>
-        <a href="index.html">Русская версия сайта</a>
+        <a href="/">Русская версия сайта</a>
     </div>
 
     <div class="notify close-all en">
         <div class="close-notify">×</div>
         <div>We found that you have an English locale, do you want to see the site in English?</div>
-        <a href="index_en.html">English version of the site</a>
+        <a href="/en">English version of the site</a>
     </div>
 
 
      <script type="text/javascript">
-        function changeLng(){
-           var str = navigator.language || navigator.browserLanguage;
-            if((str.indexOf('zh') + 1) || (str.indexOf('ZH') + 1)){
-                    $(".zh").removeClass("close-all")
-            }
-
-            str = navigator.language || navigator.browserLanguage;
-            if( (str.indexOf('en') + 1) || (str.indexOf('EN') + 1) || (str.indexOf('En') + 1)){
-                    $(".en").removeClass("close-all");
-
-            }
+        var str = navigator.language || navigator.browserLanguage;
+        if( (str.indexOf('en') + 1) || (str.indexOf('EN') + 1) || (str.indexOf('En') + 1)){
+            $(".en").removeClass("close-all");
         }
-        changeLng();
         $("body").on("click",".close-notify", function(){
             $(".notify").addClass("close-all")
         })
@@ -310,7 +300,7 @@
             var form = $("#app-form").serialize();
             $.ajax({
                 type: "POST",
-                url: "/URL/",
+                url: "/create_request",
                 data: form,
                 success: function () {
                     $('#subm').fadeOut(1).html('<div class="success">Спасибо за оставленную заявку</div>').fadeIn("slow");

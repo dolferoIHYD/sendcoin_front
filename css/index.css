@@ -52,7 +52,11 @@ a {
   width: 139.5px;
   position: absolute;
   bottom: 60px;
-  right: 102px; }
+  right: 110px; }
+
+.btn-lk-en {
+  right: 62px;
+}
 
 .btn-document {
   width: 190.8px; }
@@ -86,7 +90,9 @@ a {
   .nav-block a:focus {
     text-decoration: underline;
     color: #af834d; }
-
+  .nav-block:hover{
+    text-decoration: none;
+  }
 nav.main-block {
   display: flex;
   justify-content: space-between;
