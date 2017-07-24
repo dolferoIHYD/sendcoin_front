@@ -156,6 +156,14 @@ section.main-block{
   flex-direction: column;
   align-items:center;
   margin-bottom:10px;
+  max-width: 170px;
+
+  .description{
+    text-align:center;
+    font-size:11px;
+    font-weight: bold;
+    margin-bottom: 6px;
+  }
 
   .name{
     text-align:center;
@@ -166,7 +174,7 @@ section.main-block{
     text-align:center;
     color: $gold;
     margin-top:2px;
-    margin-bottom:7px;
+    margin-bottom:2px;
   }
   .soc{
     img:first-child{
